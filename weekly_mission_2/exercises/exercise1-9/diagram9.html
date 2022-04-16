@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Diagram</title>
+    <style>
+        .mermaid{
+            display:flex;
+            justify-content: center;
+            margin-top:10%;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <div class="mermaid">
+        classDiagram
+            User <|-- Uber
+            User : +getUser()
+            User : +getName()
+            User : +photo
+            User : +name
+            User : +lastname
+            User : +number
+            User : +email
+
+    </div>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+</body>

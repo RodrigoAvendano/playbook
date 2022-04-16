@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagram 1</title>
+    <style>
+        .mermaid{
+            display:flex;
+            justify-content: center;
+            margin-top:10%;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <div class="mermaid">
+        classDiagram
+            Issue <|-- Github
+            Issue : +getTitleAndAuthor()
+            Issue : +getGeneralInfo()
+            Issue : +title
+            Issue : +repositoryNameAssociated
+            Issue : +status
+            Issue : +labels
+            Issue : +author
+            Issue : +dateCreated
+            Issue : +lastUpdated
+    </div>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+</body>
+
+</html>
