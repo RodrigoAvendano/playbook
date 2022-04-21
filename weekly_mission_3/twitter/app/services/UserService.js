@@ -1,4 +1,4 @@
-const User = require("./../models/User");
+const User = require('./../models/User');
 
 class UserService {
   static create(id, username, name) {
@@ -6,18 +6,16 @@ class UserService {
   }
 
   static getInfo(user) {
-    let list = [];
-    Object.keys(user).map((key) => {
-      list.push(user[key]);
-    });
-    return list;
+    // let list = [];
+    // Object.keys(user).map((key) => {
+    //   list.push(user[key]);
+    // });
+    // return list;
+    return Object.values(user)
   }
 
   static updateUsername(user, newUserName) {
-    //  const myObj = new User(user.id, user.username, user.name, 'My bio');
-    //   myObj.setUsername = newUserName
-    //   console.log()
-    const myUser = user;
+    user.username = newUserName
   }
 
   static getAllUsernames(names) {
