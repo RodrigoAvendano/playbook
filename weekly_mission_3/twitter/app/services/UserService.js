@@ -1,4 +1,4 @@
-const User = require('./../models/User');
+const User = require("./../models/User");
 
 class UserService {
   static create(id, username, name) {
@@ -11,11 +11,11 @@ class UserService {
     //   list.push(user[key]);
     // });
     // return list;
-    return Object.values(user)
+    return Object.values(user);
   }
 
   static updateUsername(user, newUserName) {
-    user.username = newUserName
+    user.setUsername = newUserName;
   }
 
   static getAllUsernames(names) {
